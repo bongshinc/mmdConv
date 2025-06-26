@@ -1,18 +1,16 @@
-# 🧠 mmdConv – Your Mermaid Diagram Power Tool
-A lightweight CLI toolkit to convert .mmd (Mermaid) files into beautiful SVG, PNG, or PDF diagrams — with styling, layout control, and zero guesswork.
+# 🧠 mmdConv – Convert Mermaid Diagrams with Ease
 
-# 🚀 Why mmdConv?
-Mermaid is powerful, but let’s be honest — the CLI can be clunky. You find yourself:
-Manually tweaking layout directions
-Forgetting CLI flags every time
-Wishing for better font sizes and styling
-Wondering if it’s even working when it hangs
+A lightweight CLI tool that helps you convert `.mmd` files created with [Mermaid](https://mermaid-js.github.io/) into `SVG`, `PNG`, or `PDF` formats. 
 
-## mmdConv fixes all that with:
-🌀 A Bash wrapper that prompts and guides you
-🧭 Direction control (TD, LR, etc.) via flags
-🎨 Custom CSS styling for bold, readable diagrams
-⏱️ Spinner + duration feedback so you’re never left guessing
+mmdConv simplifies diagram generation by providing:
+
+- 🧭 Customizable layout direction (`TD`, `LR`, etc.)
+- 🎨 Optional CSS styling for consistent output
+- 🧰 Bash and Node.js scripts for flexible workflows
+- ⏱️ Feedback during processing so you know what's happening
+
+It's handy when you want quick, reliable diagram exports — without memorizing long `mmdc` commands.
+
 
 # 🛠️ Installation
 ## <details> <summary>📦 OS-level Dependencies (Linux)</summary>
