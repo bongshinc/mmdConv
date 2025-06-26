@@ -5,7 +5,7 @@ Mermaid mmd file to SVG, PNG, or PDF file.
 
 Before you start, make sure your system includes:
 
-<details>
+
 <summary>📦 OS-level Dependencies (Linux)</summary>
 
 ```bash
