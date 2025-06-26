@@ -19,9 +19,7 @@ libasound2t64 \
   fonts-liberation \
   libu2f-udev \
   libgbm1
-</details>
 
-<details>
 <summary>🛠️ Setup</summary>
 Clone the repository and install dependencies:
 
@@ -29,22 +27,17 @@ Clone the repository and install dependencies:
 git clone https://github.com/bongshinc/mmdConv.git
 cd mmdConv
 npm install
-</details>
 
-<details>
 <summary>🚀 Usage</summary>
 Convert via Bash script
 ``bash
 ./convert.sh -i your-diagram.mmd           # Outputs your-diagram.svg
 ./convert.sh -i file.mmd -f png            # Outputs file.png
 
-
 Convert via Node CLI
 ```bash
 node mmdConv.js -i file.mmd -f svg -d td
-</details>
 
-<details>
 <summary>📁 File Structure</summary>
 
 📁 File Structure
