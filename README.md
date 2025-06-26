@@ -36,7 +36,7 @@ chmod +x convert.sh
 </details>
 
 # ⚙️ Usage
-## <details> <summary>🖥️ Bash Script</summary>
+## <details> 🖥️ Bash Script
 ./convert.sh -i diagram.mmd                 # Outputs diagram.svg
 ./convert.sh -i diagram.mmd -f png          # Outputs diagram.png
 ./convert.sh -i diagram.mmd -f pdf -o out.pdf
