@@ -14,6 +14,7 @@ It's handy when you want quick, reliable diagram exports — without memorizing 
 
 # 🛠️ Installation
 ## <details> <summary>📦 OS-level Dependencies (Linux)</summary>
+```bash
 sudo apt update
 sudo apt install -y \
   libasound2t64 \
@@ -27,6 +28,7 @@ sudo apt install -y \
 </details>
 
 ## <details> <summary>📦 Project Setup</summary>
+```bash
 git clone https://github.com/bongshinc/mmdConv.git
 cd mmdConv
 npm install
