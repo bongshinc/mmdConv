@@ -1,17 +1,31 @@
-# mmdConv
+🧠 mmdConv – Your Mermaid Diagram Power Tool
+A lightweight CLI toolkit to convert .mmd (Mermaid) files into beautiful SVG, PNG, or PDF diagrams — with styling, layout control, and zero guesswork.
 
-A simple and configurable tool to convert Mermaid `.mmd` files into `SVG`, `PNG`, or `PDF`.
+🚀 Why mmdConv?
+Mermaid is powerful, but let’s be honest — the CLI can be clunky. You find yourself:
 
----
+Manually tweaking layout directions
 
-## 🔧 System Requirements
+Forgetting CLI flags every time
 
-Before you begin, make sure your system has the following libraries installed:
+Wishing for better font sizes and styling
 
-<details>
-<summary>📦 OS-level Dependencies (Linux)</summary>
+Wondering if it’s even working when it hangs
 
-```bash
+mmdConv fixes all that with:
+
+🌀 A Bash wrapper that prompts and guides you
+
+🧭 Direction control (TD, LR, etc.) via flags
+
+🎨 Custom CSS styling for bold, readable diagrams
+
+⏱️ Spinner + duration feedback so you’re never left guessing
+
+🛠️ Installation
+<details> <summary>📦 OS-level Dependencies (Linux)</summary>
+
+bash
 sudo apt update
 sudo apt install -y \
   libasound2t64 \
@@ -24,43 +38,55 @@ sudo apt install -y \
   libgbm1
 </details>
 
-<details> <summary>🛠️ Setup</summary>
-
-Clone the repository and install dependencies:
+<details> <summary>📦 Project Setup</summary>
 
 bash
 git clone https://github.com/bongshinc/mmdConv.git
 cd mmdConv
 npm install
+chmod +x convert.sh
 </details>
 
-<details> <summary>🚀 Usage</summary>
+⚙️ Usage
+<details> <summary>🖥️ Bash Script</summary>
 
-Using the Bash script
 bash
-./convert.sh -i your-diagram.mmd           # Converts to your-diagram.svg
-./convert.sh -i diagram.mmd -f png         # Converts to diagram.png
-./convert.sh -i file.mmd -f pdf -o output.pdf
-Using the Node.js script
-bash
-node mmdConv.js -i file.mmd -f svg -d td
-Supported options:
-
--i: input .mmd file (required)
--f: output format (svg, png, pdf) — default is svg
--o: output filename (optional)
--d: layout direction (td, lr, bt, rl) — modifies graph direction
+./convert.sh -i diagram.mmd                 # Outputs diagram.svg
+./convert.sh -i diagram.mmd -f png          # Outputs diagram.png
+./convert.sh -i diagram.mmd -f pdf -o out.pdf
+If -i is not provided, it will prompt you interactively.
 
 </details>
 
-<details> <summary>📁 File Structure</summary>
+<details> <summary>🧠 Node.js Script</summary>
 
+bash
+node mmdConv.js -i diagram.mmd -f svg -d td
+Supported flags:
+
+-i input file (required)
+
+-f format: svg (default), png, pdf
+
+-o output file (optional)
+
+-d direction: td, lr, bt, rl
+
+</details>
+
+🎨 Styling & Config
+diagram-style.css: Customize font size, weight, and colors
+
+puppeteer-config.json: Chromium config with --no-sandbox and timeout settings
+
+📁 Project Structure
 mmdConv/
 ├── convert.sh                # Bash wrapper
-├── mmdConv.js                # Node.js converter with spinner & CLI
-├── puppeteer-config.json     # Headless Chromium config for mmdc
-├── diagram-style.css         # Custom Mermaid style overrides
+├── mmdConv.js                # Node.js CLI with spinner
+├── puppeteer-config.json     # Puppeteer config
+├── diagram-style.css         # Mermaid CSS overrides
 ├── examples/
 │   └── book-manager.mmd
 └── README.md
-</details>
+🪪 License
+MIT — free to use, modify, and share.
