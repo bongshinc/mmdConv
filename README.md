@@ -1,17 +1,20 @@
 # mmdConv
-Mermaid mmd file to SVG, PNG, or PDF file.
+
+A simple and configurable tool to convert Mermaid `.mmd` files into `SVG`, `PNG`, or `PDF`.
+
+---
 
 ## 🔧 System Requirements
 
-Before you start, make sure your system includes:
+Before you begin, make sure your system has the following libraries installed:
 
-
+<details>
 <summary>📦 OS-level Dependencies (Linux)</summary>
 
 ```bash
 sudo apt update
 sudo apt install -y \
-libasound2t64 \
+  libasound2t64 \
   libnss3 \
   libatk-bridge2.0-0 \
   libxss1 \
@@ -19,37 +22,45 @@ libasound2t64 \
   fonts-liberation \
   libu2f-udev \
   libgbm1
+</details>
 
-<summary>🛠️ Setup</summary>
+<details> <summary>🛠️ Setup</summary>
+
 Clone the repository and install dependencies:
 
-```bash
+bash
 git clone https://github.com/bongshinc/mmdConv.git
 cd mmdConv
 npm install
+</details>
 
-<summary>🚀 Usage</summary>
-Convert via Bash script
-``bash
-./convert.sh -i your-diagram.mmd           # Outputs your-diagram.svg
-./convert.sh -i file.mmd -f png            # Outputs file.png
+<details> <summary>🚀 Usage</summary>
 
-Convert via Node CLI
-```bash
+Using the Bash script
+bash
+./convert.sh -i your-diagram.mmd           # Converts to your-diagram.svg
+./convert.sh -i diagram.mmd -f png         # Converts to diagram.png
+./convert.sh -i file.mmd -f pdf -o output.pdf
+Using the Node.js script
+bash
 node mmdConv.js -i file.mmd -f svg -d td
+Supported options:
 
-<summary>📁 File Structure</summary>
+-i: input .mmd file (required)
+-f: output format (svg, png, pdf) — default is svg
+-o: output filename (optional)
+-d: layout direction (td, lr, bt, rl) — modifies graph direction
 
-📁 File Structure
+</details>
+
+<details> <summary>📁 File Structure</summary>
+
 mmdConv/
-├── convert.sh
-├── mmdConv.js
-├── puppeteer-config.json
-├── diagram-style.css
+├── convert.sh                # Bash wrapper
+├── mmdConv.js                # Node.js converter with spinner & CLI
+├── puppeteer-config.json     # Headless Chromium config for mmdc
+├── diagram-style.css         # Custom Mermaid style overrides
 ├── examples/
-│   └── sample.mmd
+│   └── book-manager.mmd
 └── README.md
-
-This block makes it easy to follow and visually appealing on GitHub. Just paste it wherever you want in your `README.md`, hit “Commit changes”, and you're good to go.
-
-Want help adding shields (like license, Node version, etc.) or turning this into a published CLI tool next?
+</details>
