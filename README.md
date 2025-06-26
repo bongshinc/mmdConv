@@ -44,7 +44,7 @@ If -i is not provided, it will prompt you interactively.
 
 </details>
 
-## <details> <summary>🧠 Node.js Script</summary>
+## 🧠 Node.js Script
 
 node mmdConv.js -i diagram.mmd -f svg -d td
 
